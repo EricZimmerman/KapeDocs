@@ -5,6 +5,7 @@
 [Menu Item 1]()
 
   * # The basics
+  * [What is KAPE?](Pages\1-WhatIsKape.md)
   * [Getting started](Pages\2.-Getting-started.md)
   * [Targets](Pages\2.1-Targets.md)
   * [Modules](Pages\2.2-Modules.md)
