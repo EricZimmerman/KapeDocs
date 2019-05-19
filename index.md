@@ -14,7 +14,7 @@ The second (optional) stage of processing is to run one or more programs against
 
 By grouping things by category, examiners of all levels have a means to discover relevant information regardless of the individual artifact that a piece of information came from. In other words, it is no longer necessary for an examiner to know to process prefetch, shimcache, amcache, userassist, and so on as it relates to evidence of execution artifacts. By thinking categorically and grouping output in the same way, a wider range of artifacts can be leveraged for any given requirement.
 
-![Process overview](https://github.com/EricZimmerman/KapeDocs/blob/master/ProcessArrow.jpg)
+![Process overview](https://github.com/EricZimmerman/KapeDocs/blob/master/Pictures/ProcessArrow.jpg)
 
 ### Target Collection
 Targets are essentially collections of file and directory specifications. KAPE knows how to read these specifications and expand them to files and directories that exist on a target location. Once KAPE has processed all targets and has built a list of files, the list is processed, and each file is copied from the source to the destination directory. For files that are locked by the operating system and therefore are not able to be copied by regular means, the file is added to a secondary queue. This secondary queue contains all the files that were locked or in use. After the primary queue is processed, the secondary queue is processed and a different technique, using raw disk
