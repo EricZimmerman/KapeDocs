@@ -1,4 +1,4 @@
-# Eric Zimmerman's tools
+# KAPE documentation
 
 [Home](index.md)
 [ChangeLog](Pages\0.-Changelog.md)
