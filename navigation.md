@@ -8,11 +8,11 @@
   * [Getting started](Pages\2.-Getting-started.md)
   * [Targets](Pages\2.1-Targets.md)
   * [Modules](Pages\2.2-Modules.md)
+  * [Log files](Pages\4.-Log-files.md)
   - - - -
   * # Usage
   * [Using KAPE](Pages\3.-Using-KAPE.md)
   * [Batch mode](Pages\3.1-Batch-mode.md)
-  * [Log files](Pages\4.-Log-files.md)
   * [gkape](Pages\5.-gkape.md)
   - - - -
   * # Other
