@@ -1,4 +1,4 @@
-# KAPE documentation
+# KAPE Documentation
 
 [Home](index.md)
 
