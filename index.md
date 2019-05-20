@@ -14,3 +14,5 @@ The second (optional) stage of processing is to run one or more programs against
 By grouping things by category, examiners of all levels have a means to discover relevant information regardless of the individual artifact that a piece of information came from. In other words, it is no longer necessary for an examiner to know to process prefetch, shimcache, amcache, userassist, and so on as it relates to evidence of execution artifacts. By thinking categorically and grouping output in the same way, a wider range of artifacts can be leveraged for any given requirement.
 
 
+![Process overview](https://github.com/EricZimmerman/KapeDocs/blob/master/Pictures/ProcessArrow.jpg)
+
