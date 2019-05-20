@@ -24,5 +24,5 @@ Regardless of how the file is copied (either regularly or via raw access), the o
 
 ### Module Execution
 Like targets, modules are defined using simple properties and are used to run programs. These programs can target anything, including files collected via the target capabilities as well as any other kinds of programs you may want to run on a system from a live response perspective.
-For example, if you collected jump lists, a tool like JLECmd could dump the contents of the jump lists to CSV. If you also wanted to collect the output of netstat or ipconfig, you could do so. 
-
+For example, if you collected jump lists, a tool like JLECmd could dump the contents of the jump lists to CSV. If you also wanted to collect the output of netstat or ipconfig, you could do so.
+Each of these options would be contained in its own module and then grouped together based on commonality between the modules, such as "NetworkLiveResponse" for example.
