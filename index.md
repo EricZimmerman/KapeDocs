@@ -15,6 +15,8 @@ By grouping things by category, examiners of all levels have a means to discover
 
 <img src="https://github.com/EricZimmerman/KapeDocs/blob/master/Pictures/ProcessArrow.jpg">
 
+![Process overview](https://github.com/EricZimmerman/KapeDocs/blob/master/Pictures/ProcessArrow.jpg)
+
 
 ### Target Collection
 Targets are essentially collections of file and directory specifications. KAPE knows how to read these specifications and expand them to files and directories that exist on a target location. Once KAPE has processed all targets and has built a list of files, the list is processed, and each file is copied from the source to the destination directory.
