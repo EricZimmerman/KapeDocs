@@ -1,1 +1,3 @@
-This is a place for pictures for the KapeFiles Wiki
+Visit the site below to view the docs
+
+https://ericzimmerman.github.io/KapeDocs/
