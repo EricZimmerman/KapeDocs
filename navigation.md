@@ -1,7 +1,5 @@
 # KAPE Documentation
 
-[Home](index.md)
-
 [Topics]()
 
   * # The basics
