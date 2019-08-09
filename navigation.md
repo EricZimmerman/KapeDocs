@@ -12,6 +12,7 @@
   * [Using KAPE](Pages\3.-Using-KAPE.md)
   * [Batch mode](Pages\3.1-Batch-mode.md)
   * [gkape](Pages\5.-gkape.md)
+  * [SFTP mode](Pages\6.-SFTP.md)
   - - - -
   * # Other
   * [Change log](Pages\0.-Changelog.md)

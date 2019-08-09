@@ -1,0 +1,39 @@
+# Example KAPE SFTP configuration file
+# Eric Zimmerman eric.zimmerman@kroll.com
+# Adjust as needed, then pass full path to this file to the --sftpc switch
+
+Port: 22
+HomeDirectory: C:\temp\sftp\Root
+LogDirectory: C:\temp\sftp\Logs
+LogLevel: Verbose 
+Users:
+    -
+        UserName: eric
+        Password: wizzo123!
+        Access: Read|Write|List
+        Jail: true
+    -
+        UserName: mike
+        Password: wizzo123!
+        Access: Read|Write|List
+        Jail: false
+    -
+        UserName: mikeAll
+        Password: wizzo123!
+        Access: All
+        Jail: false
+    -
+        UserName: mikeRO
+        Password: wizzo123!
+        Access: Read|List
+        Jail: false
+
+# Access options:
+# One or more of the following: Read|Write|Create|Delete|List|All
+
+# Jail
+# When false, user's home directory is HomeDirectory
+# When true, user will be chrooted to 'HomeDirectory\UserName' directory
+
+# LogLevel
+# Possible choices are: Error | Info | Debug | Verbose | Off
