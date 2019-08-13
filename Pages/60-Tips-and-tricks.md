@@ -56,37 +56,37 @@ C:\RTR>
 
 2. After moving to my working directory I deploy 7za.exe (7-Zip standalone binary) and KAPE as a custom package (only the files I need for a specific task).
 
-![01](https://raw.githubusercontent.com/EricZimmerman/KapeDocs/master/Pictures/csFalcon01.png)
-![02](https://raw.githubusercontent.com/EricZimmerman/KapeDocs/master/Pictures/csFalcon02.png)
-![03](https://raw.githubusercontent.com/EricZimmerman/KapeDocs/master/Pictures/csFalcon03.png)
+ ![01](https://raw.githubusercontent.com/EricZimmerman/KapeDocs/master/Pictures/csFalcon01.png)
+ ![02](https://raw.githubusercontent.com/EricZimmerman/KapeDocs/master/Pictures/csFalcon02.png)
+ ![03](https://raw.githubusercontent.com/EricZimmerman/KapeDocs/master/Pictures/csFalcon03.png)
 
-```
-C:\RTR> put "7za.exe" 
-C:\RTR> put "MFT-Collector.7z" 
-C:\RTR> ls 
-```
+ ```
+ C:\RTR> put "7za.exe" 
+ C:\RTR> put "MFT-Collector.7z" 
+ C:\RTR> ls 
+ ```
 
-Notes: All my files and response scripts are stored in the CrowdStrike cloud, so that I can deploy them also when an endpoint is isolated (via Network Containment feature). You have to use the file names and script names used in CrowdStrike cloud.
+ Notes: All my files and response scripts are stored in the CrowdStrike cloud, so that I can deploy them also when an endpoint is isolated (via Network Containment feature). You have to use the file names and script names used in CrowdStrike cloud.
 
 3. Then I run my response script (MFT-Collector.ps1)
 
-```
-runscript -CloudFile="MFT-Collector" -CommandLine="" 
-```
+ ```
+ runscript -CloudFile="MFT-Collector" -CommandLine="" 
+ ```
 
-or
+ or
 
-```
-runscript -CloudFile="MFT-Collector" -CommandLine="EnableVSC" 
-```
+ ```
+ runscript -CloudFile="MFT-Collector" -CommandLine="EnableVSC" 
+ ```
 
-Note: Custom scripts support only one parameter. I like to use this parameter as an optional parameter to enable collection of evidence stored in Volume Shadow Copies.
+ Note: Custom scripts support only one parameter. I like to use this parameter as an optional parameter to enable collection of evidence stored in Volume Shadow Copies.
 
-My PowerShell script extracts the files from the custom package (MFT-Collector.7z) and KAPE collects the targeted evidence ($MFT).
+ My PowerShell script extracts the files from the custom package (MFT-Collector.7z) and KAPE collects the targeted evidence ($MFT).
 
 4. With the RTR command 'zip' I create a file of my output directory and with the RTR command 'get' I collect the ZIP archive.
 
-Note: The maximum file size for the collection via 'get' is 4 GB. When needed I split the files with 7za.exe (e.g. big RAM files).
+ Note: The maximum file size for the collection via 'get' is 4 GB. When needed I split the files with 7za.exe (e.g. big RAM files).
 
 
 Links:
