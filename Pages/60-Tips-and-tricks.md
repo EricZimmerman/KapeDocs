@@ -48,11 +48,11 @@ You can use all command line EZTools and especially kape.exe as low level file e
 Usage: 
 1. I always start with creating a temporary working directory on the live endpoint and change my directory afterwards.
 
-```
-C:\> mkdir "C:\RTR"
-C:\> cd "C:\RTR"
-C:\RTR> 
-```
+ ```
+ C:\> mkdir "C:\RTR"
+ C:\> cd "C:\RTR"
+ C:\RTR> 
+ ```
 
 2. After moving to my working directory I deploy 7za.exe (7-Zip standalone binary) and KAPE as a custom package (only the files I need for a specific task).
 
