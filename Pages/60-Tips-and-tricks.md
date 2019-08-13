@@ -36,4 +36,62 @@ If my testing is correct, then Kape should best be run as system.
 
 I used psexec.exe to run Kape as system: e.g., PsExec64.exe -s E:\kape\Kape.exe --msource G: --module MSFTallScan --mdest E:\kape\parsed
 
+## Using KAPE with CrowdStrike Falcon (Real Time Response)
+
+From Martin Willing:
+
+Introduction: 
+With the Real Time Response (RTR) feature of CrowdStrike Falcon (Endpoint Detection & Response platform) you can deploy files to live endpoints and run custom scripts. You can connect / start a session with a live endpoint (Shell with a set of built-in commands) during a security investigation. On one hand you can use multiple RTR commands (Sensor features) to interact with the live endpoint and on the other hand you can also use custom scripts (built on top of Windows PowerShell).
+
+You can use all command line EZTools and especially kape.exe as low level file extractor on NTFS volumes to collect evidence.
+
+Usage: 
+1. I always start with creating a temporary working directory on the live endpoint and change my directory afterwards.
+
+```
+C:\> mkdir "C:\RTR"
+C:\> cd "C:\RTR"
+C:\RTR> 
+```
+
+2. After moving to my working directory I deploy 7za.exe (7-Zip standalone binary) and KAPE as a custom package (only the files I need for a specific task).
+
+![01](https://raw.githubusercontent.com/EricZimmerman/KapeDocs/master/Pictures/csFalcon01.png)
+![02](https://raw.githubusercontent.com/EricZimmerman/KapeDocs/master/Pictures/csFalcon02.png)
+![03](https://raw.githubusercontent.com/EricZimmerman/KapeDocs/master/Pictures/csFalcon03.png)
+
+```
+C:\RTR> put "7za.exe" 
+C:\RTR> put "MFT-Collector.7z" 
+C:\RTR> ls 
+```
+
+Notes: All my files and response scripts are stored in the CrowdStrike cloud, so that I can deploy them also when an endpoint is isolated (via Network Containment feature). You have to use the file names and script names used in CrowdStrike cloud.
+
+3. Then I run my response script (MFT-Collector.ps1)
+
+```
+runscript -CloudFile="MFT-Collector" -CommandLine="" 
+```
+
+or
+
+```
+runscript -CloudFile="MFT-Collector" -CommandLine="EnableVSC" 
+```
+
+Note: Custom scripts support only one parameter. I like to use this parameter as an optional parameter to enable collection of evidence stored in Volume Shadow Copies.
+
+My PowerShell script extracts the files from the custom package (MFT-Collector.7z) and KAPE collects the targeted evidence ($MFT).
+
+4. With the RTR command 'zip' I create a file of my output directory and with the RTR command 'get' I collect the ZIP archive.
+
+Note: The maximum file size for the collection via 'get' is 4 GB. When needed I split the files with 7za.exe (e.g. big RAM files).
+
+
+Links:
+https://www.crowdstrike.com/endpoint-security-products/falcon-endpoint-protection-enterprise/
+
+
+
  
