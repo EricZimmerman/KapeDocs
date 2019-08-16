@@ -5,7 +5,7 @@
 Port: 22
 HomeDirectory: C:\temp\sftp\Root
 LogDirectory: C:\temp\sftp\Logs
-LogLevel: Verbose 
+LogLevel: Info 
 Users:
     -
         UserName: eric
