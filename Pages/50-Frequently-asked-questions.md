@@ -1,6 +1,6 @@
 # Frequently asked questions
 
-## How can I execute all of the config files found in a subdirectory of the Targets or Modules?
+## How can I execute all of the config files found in a subdirectory of the Targets or Modules directory?
 
 One option is to create a compound target or modules that references all the files in the directory you want to include, but an easier way is to simply include the name of the directory in the appropriate option.
 
