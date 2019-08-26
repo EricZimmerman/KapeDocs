@@ -11,3 +11,8 @@ Assuming the directory Targets\Windows exists, you could execute all targets und
 You can also of course include other target names as well, separating them with a comma:
 
 `.\kape.exe --tsource c --tdest C:\temp\tout\ --tflush --target Windows,Chrome`
+
+## I am in a corporate environment and want to push to S3, but there is a proxy in the way. Does KAPE support this?
+
+it sure does! See [here](https://github.com/EricZimmerman/KapeFiles/issues/121#issuecomment-524682298) for details on how to do this.
+
