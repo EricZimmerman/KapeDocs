@@ -8,6 +8,8 @@ While certain modules come with the binaries they need, in general, the user nee
 
 This way, there is ZERO surprises when KAPE does something.
 
+You can always find the URL of the binary that is needed using `--mlist . --mdetail` and adjusting the directory as needed for each category.
+
 ## How can I execute all of the config files found in a subdirectory of the Targets or Modules directory?
 
 One option is to create a compound target or modules that references all the files in the directory you want to include, but an easier way is to simply include the name of the directory in the appropriate option.
