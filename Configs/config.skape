@@ -5,17 +5,17 @@
 Port: 22
 HomeDirectory: C:\temp\sftp\Root
 LogDirectory: C:\temp\sftp\Logs
-LogLevel: Info 
+LogLevel: Verbose
 Users:
     -
         UserName: eric
         Password: wizzo123!
-        Access: Read|Write|List
+        Access: Read|Write|Create|List
         Jail: true
     -
         UserName: mike
         Password: wizzo123!
-        Access: Read|Write|List
+        Access: Read|Write|Create|List
         Jail: false
     -
         UserName: mikeAll
@@ -27,9 +27,21 @@ Users:
         Password: wizzo123!
         Access: Read|List
         Jail: false
+    -
+        UserName: mikeWriteOnly
+        Password: wizzo123!
+        Access: Write|Create|Read
+        Jail: false
 
 # Access options:
 # One or more of the following: Read|Write|Create|Delete|List|All
+
+# To upload files, both Write and Create are needed
+# KAPE creates a test file to ensure writability. If delete permissions are missing, KAPE cannot clean up the 
+# test files and this will have to be done manually
+
+# To create a user that can only push files and not see anything, use:
+# Write|Create|Read
 
 # Jail
 # When false, user's home directory is HomeDirectory
