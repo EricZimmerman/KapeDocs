@@ -18,7 +18,7 @@
   * [Change log](Pages\0.-Changelog.md)
   * [Frequently asked questions](Pages\50-Frequently-asked-questions.md)
   * [Tips and tricks](Pages\60-Tips-and-tricks.md)
-  * [Official training](https://raw.githubusercontent.com/EricZimmerman/KapeFiles/master/training.md)
+  * [Official training](Pages\70-training.md)
 
 [gimmick:themechooser](Choose theme)
 [gimmick:theme](flatly)
