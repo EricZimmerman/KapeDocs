@@ -4,6 +4,12 @@
 
 See ![here](https://medium.com/@bromiley/automating-sftp-creation-for-kapes-sake-b0bc68d10522) for a nice write-up by Matt Bromiley on how to use Digital Ocean to quickly stand up SFTP for use with KAPE
 
+## Automating KAPE at Scale
+
+From Brian Maloney:
+
+This setup will give you a remote KAPE instance with automatic parsing and email alerting. More info can be found [here](https://malwaremaloney.blogspot.com/2020/06/kape-at-scale.html)
+
 ## Using environment variables to create unique destinations
 
 In some situations, when collecting multiple machines at once to a common location for example, you will want to keep things separated by machine. You can use environment variables in KAPE to achieve this. 
