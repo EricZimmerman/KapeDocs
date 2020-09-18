@@ -2,7 +2,7 @@
 
 ## Quick SFTP server standup HOWTO
 
-See ![here](https://medium.com/@bromiley/automating-sftp-creation-for-kapes-sake-b0bc68d10522) for a nice write-up by Matt Bromiley on how to use Digital Ocean to quickly stand up SFTP for use with KAPE
+See [here](https://medium.com/@bromiley/automating-sftp-creation-for-kapes-sake-b0bc68d10522) for a nice write-up by Matt Bromiley on how to use Digital Ocean to quickly stand up SFTP for use with KAPE
 
 ## Automating KAPE at Scale
 
