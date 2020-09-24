@@ -12,7 +12,7 @@ This setup will give you a remote KAPE instance with automatic parsing and email
 
 From Mark Hallman:
 
-Use ZeroTier and KAPE for remote collection magic! Read all about it ![here](External\Remote_Collections_KAPE\Remote Collections with KAPE.md)
+Use ZeroTier and KAPE for remote collection magic! Read all about it [here](External\Remote_Collections_KAPE\Remote Collections with KAPE.md)
 
 ## Using environment variables to create unique destinations
 
