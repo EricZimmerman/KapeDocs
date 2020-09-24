@@ -6,11 +6,11 @@ See [here](https://medium.com/@bromiley/automating-sftp-creation-for-kapes-sake-
 
 ## Automating KAPE at Scale
 
-From Brian Maloney:
+### From Brian Maloney:
 
 This setup will give you a remote KAPE instance with automatic parsing and email alerting. More info can be found [here](https://malwaremaloney.blogspot.com/2020/06/kape-at-scale.html)
 
-From Mark Hallman:
+### From Mark Hallman:
 
 Use ZeroTier and KAPE for remote collection magic! Read all about it [here](External\Remote_Collections_KAPE\Remote Collections with KAPE.md)
 
