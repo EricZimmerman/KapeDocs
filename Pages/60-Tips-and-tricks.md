@@ -102,7 +102,30 @@ Usage:
 
 Links:
 https://www.crowdstrike.com/endpoint-security-products/falcon-endpoint-protection-enterprise/
+```
 
+## KAPE Target Creation
 
+### From Andrew Rathbun:
 
- 
+When it comes to creating a KAPE Target, I strongly recommend installing [Voidtools' Everything](https://www.voidtools.com/) prior to beginning this process. Not only should you be using this tool in your everyday Windows-computing life instead of Windows Search, but it makes locating where artifacts are stored MUCH easier. 
+
+As you're installing an application that you want to do more research into, open Everything and sort on Last Modified. That way, you can see files added to your computer in real-time as the program is installing. Once the program is installed, keep Everything opened and watch which files are updated as you use the program. If nothing is happening, fully exit the program (not minimize or close to taskbar) and observe what files are modified. Often, these are what you want to look further into as they will likely be writing data that can serve to be an important artifact for that program!
+
+Also, once you install an application, do a search either for the name of the application, the developer, or anything that might populate results in Everything for where data could possibly be stored for this application. The reason why I say to get creative with your search terms is because not every application stores data within `.\AppData\Local\ApplicationName\`. For instance, Directory Opus stores data in a folder called GPSoftware. Edit Pad Pro and other apps created by that developer stored all files in a folder call JGsoft, which is short for Just Great Software. However, some developers are nice and just searching the application's name will yield everything there is to find.
+
+You will notice some applications store data in `.\AppData\Local\`, some store in `.\AppData\Roaming\`, some store in both, some store in neither and rather store in `C:\ProgramData\`, some store in all three, and some store in none of those and choose some location like a user's Documents folder. It's MUCH easier to search in Everything and focus on the Path column to see where artifacts reside on disk. See the example below:
+
+![alt text](https://github.com/rathbuna/KapeDocs/blob/master/Pictures/Voidtools%20Everything%20Search%20Example.gif "Voidtools Everything Search Example")
+
+In the GIF above, you can see that Everything stores a .ini file in the `.\AppData\Roaming\` folder and a .db file in the `.\AppData\Local\` folder. That gives me a pointer to check out those locations for those artifacts and potentially more!
+
+Everything makes your life easy in that when you find a file you may want to look at, just right click on the file and Open Path. That way, you'll be brought to the folder where that file resides and you can see not only the file of interest but other potential files and folders of interest. 
+
+![alt text](https://github.com/rathbuna/KapeDocs/blob/master/Pictures/Voidtools%20Everything%20Right%20Click%20Open%20Path.gif "Voidtools Everything Right Click Open Path")
+
+Once you're in the folder of interest, dive into each file and subfolder and see what is readable in an advanced text editor like Notepad++, Edit Pad Pro, Sublime Text, etc. Regardless of the file extension of the artifacts you find, drag and drop it into your favorite text editor and find useful data that is human readable. If it's human readable and you think there could be value to an investigation, private/LE/otherwise, then create a target for it!
+
+When you're creating Targets, it's not mandatory but it's appreciated if you include some comments below as to what the user can reasonably expect to get by using the Target you created. Any direction you can give them could potentially help a very important investigation down the road so the more you do on the front end, the more an investigator and the victim/client they're working for will benefit on the back end. By creating the Target, YOU are the subject matter expert on that artifact because you're doing the legwork for everyone else, so while you're in the trenches, report on what you see as verbose as possible. That way, you won't have to go back there again because you did it right the first time!
+
+If you have any questions on how to create a Target, please do not hesitate to reach out to me. I can always be found on the [Digital Forensics Discord Server](https://aboutdfir.com/a-beginners-guide-to-the-digital-forensics-discord-server/). 
