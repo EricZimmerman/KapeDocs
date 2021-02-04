@@ -142,3 +142,44 @@ Wikipedia also typically has nearly exhaustive lists of types of programs that c
 
 #### Conclusion
 If you have any questions on how to create a Target or need some feedback on an idea for a Target, please do not hesitate to reach out to me. I can always be found on the [Digital Forensics Discord Server](https://aboutdfir.com/a-beginners-guide-to-the-digital-forensics-discord-server/). 
+
+## Running KAPE against multiple collected VHDX files
+
+If you need to run KAPE against multiple VHDX containers by mounting, running
+KAPE and unmounting it again, the following script could be of help:
+
+``` PowerShell
+# KAPE folder
+$kape = "path to KAPE binary"
+# KAPE evidence folder where .vhdx are located
+$files = gci "path-to-folder-with-multiple-collections\*-evidence\*.vhdx"
+# KAPE output folder, new folders per server are created
+$dest = "output folder used for --mdest"
+# Regex pattern to extract server name out of the path to the vhdx file,
+# In the example the foldername for each server is servername-evidence.
+$serverPattern = "\\(\w*)-evidence"
+# KAPE modules to run
+$modules = "JLECmd,LECmd,SBECmd,WxTCmd,MFTECmd,RBCmd,SrumECmd,AmcacheParser,AppCompatCacheParser,CCM-RUA,PECmd,RecentFileCacheParser,RECmd,RegRipper-ALL,Mini_Timeline"
+
+cd $kape
+
+foreach ($f in $files) {
+    write "[*] Processing $f"
+
+    Mount-DiskImage $f.FullName | select -expandproperty Attached
+
+    $server = $f.directory -match $ServerPattern
+    $server = $Matches[1]
+    # instead of using fix output path, we could also use $f.directory to get the current VHDX file directory
+    $output = $(join-path $dest $server)
+    write "[*] Run KAPE for $server, Dest: $output"
+
+    .\kape.exe --msource D:\C --mdest $output --mflush --module $modules --mvars computerName:$server
+
+    sleep 10
+
+    Dismount-DiskImage $f.FullName | select -expandproperty Attached
+
+    write "Finished.`n"
+}
+```
