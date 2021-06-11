@@ -142,3 +142,7 @@ Wikipedia also typically has nearly exhaustive lists of types of programs that c
 
 #### Conclusion
 If you have any questions on how to create a Target or need some feedback on an idea for a Target, please do not hesitate to reach out to me. I can always be found on the [Digital Forensics Discord Server](https://aboutdfir.com/a-beginners-guide-to-the-digital-forensics-discord-server/). 
+
+## Running KAPE against multiple collected VHDX files
+
+If you need to run KAPE against multiple VHDX containers by mounting, running KAPE and unmounting it again, the command Invoke-KapeOnMultipleImages of [Invoke-Forensics](https://github.com/swisscom/Invoke-Forensics) would speed up this process.
