@@ -11,7 +11,7 @@ At a high level, KAPE works by adding file masks to a queue. This queue is then 
 
 The second (optional) stage of processing is to run one or more programs against the collected data. This works by either targeting specific file names or directories. Various programs are run against the files and the output from the programs is then saved in directories named after a category, such as EvidenceOfExecution, BrowserHistory, AccountUsage, and so on.
 
-By grouping things by category, examiners of all levels have a means to discover relevant information regardless of the individual artifact that a piece of information came from. In other words, it is no longer necessary for an examiner to know to process prefetch, shimcache, amcache, userassist, and so on as it relates to evidence of execution artifacts. By thinking categorically and grouping output in the same way, a wider range of artifacts can be leveraged for any given requirement.
+By grouping things by category, examiners of all levels have a means to discover relevant information regardless of the individual artifact that a piece of information came from. In other words, it is no longer necessary for an examiner to know to process **Prefetch**, **ShimCache**, **Amcache**, **UserAssist**, and so on as it relates to evidence of execution artifacts. By thinking categorically and grouping output in the same way, a wider range of artifacts can be leveraged for any given requirement.
 
 ![Process overview](https://raw.githubusercontent.com/EricZimmerman/KapeDocs/master/Pictures/ProcessArrow.jpg)
 
@@ -28,6 +28,6 @@ Regardless of how the file is copied (either regularly or via raw access), the o
 ### Module Execution
 Like targets, modules are defined using simple properties and are used to run programs. These programs can target anything, including files collected via the target capabilities as well as any other kinds of programs you may want to run on a system from a live response perspective.
 
-For example, if you collected jump lists, a tool like JLECmd could dump the contents of the jump lists to CSV. If you also wanted to collect the output of netstat or ipconfig, you could do so.
+For example, if you collected jump lists, a tool like JLECmd could dump the contents of the jump lists to CSV. If you also wanted to collect the output of **netstat** or **ipconfig**, you could do so.
 
 Each of these options would be contained in its own module and then grouped together based on commonality between the modules, such as "NetworkLiveResponse" for example.
