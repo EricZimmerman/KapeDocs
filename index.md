@@ -5,7 +5,7 @@ Kroll Artifact Parser and Extractor (KAPE) is primarily a triage program that wi
 ## How KAPE works
 KAPE serves two primary functions: 1) collect files and 2) process collected files with one or more programs. By itself, KAPE does not do anything in relation to either of these functions; rather, they are achieved by reading configuration files on the fly and, based on the contents of these files, collecting and processing files. This makes KAPE very extensible in adding or extending functionality.
 
-KAPE uses the concepts of targets and modules to do its work. KAPE comes with a range of default targets and modules for most common operations needed in most forensic exams. These can also be used as examples to follow to make new targets and modules.
+KAPE uses the concepts of Targets and Modules to do its work. KAPE comes with a range of default Targets and Modules for most common operations needed in most forensic exams. These can also be used as examples to follow to make new Targets and Modules.
 
 At a high level, KAPE works by adding file masks to a queue. This queue is then used to find and copy out files from a source location. For files that are locked by the operating system, a second pass takes place that bypasses the locking. At the end of the process, KAPE will make a copy and preserve metadata about all available files from a source location into a given directory.
 
@@ -17,7 +17,7 @@ By grouping things by category, examiners of all levels have a means to discover
 
 
 ### Target Collection
-Targets are essentially collections of file and directory specifications. KAPE knows how to read these specifications and expand them to files and directories that exist on a target location. Once KAPE has processed all targets and has built a list of files, the list is processed, and each file is copied from the source to the destination directory.
+Targets are essentially collections of file and directory specifications. KAPE knows how to read these specifications and expand them to files and directories that exist on a target location. Once KAPE has processed all Targets and has built a list of files, the list is processed, and each file is copied from the source to the destination directory.
 
 For files that are locked by the operating system and therefore are not able to be copied by regular means, the file is added to a secondary queue. This secondary queue contains all the files that were locked or in use.
 
@@ -26,8 +26,8 @@ After the primary queue is processed, the secondary queue is processed and a dif
 Regardless of how the file is copied (either regularly or via raw access), the original timestamps from all directories and the files themselves are reapplied to the destination files. The metadata is also collected into log files as well.
 
 ### Module Execution
-Like targets, modules are defined using simple properties and are used to run programs. These programs can target anything, including files collected via the target capabilities as well as any other kinds of programs you may want to run on a system from a live response perspective.
+Like Targets, Modules are defined using simple properties and are used to run programs. These programs can target anything, including files collected via the target capabilities as well as any other kinds of programs you may want to run on a system from a live response perspective.
 
 For example, if you collected jump lists, a tool like JLECmd could dump the contents of the jump lists to CSV. If you also wanted to collect the output of **netstat** or **ipconfig**, you could do so.
 
-Each of these options would be contained in its own module and then grouped together based on commonality between the modules, such as "NetworkLiveResponse" for example.
+Each of these options would be contained in its own Module and then grouped together based on commonality between the Modules, such as "NetworkLiveResponse" for example.
