@@ -33,3 +33,7 @@ You can also of course include other Target names as well, separating them with 
 ## I am in a corporate environment and want to push to S3, but there is a proxy in the way. Does KAPE support this?
 
 It sure does! See [here](https://github.com/EricZimmerman/KapeFiles/issues/121#issuecomment-524682298) for details on how to do this.
+
+## I am experiencing scaling issues with gkape. How do I fix this?
+
+[This issue](https://github.com/EricZimmerman/KapeFiles/issues/614) addresses this. Long story short, don't have too low of a resolution (1080p or lower) with too high of scaling (150% or more) otherwise you will not be able to see components of gkape's GUI. 
