@@ -20,5 +20,5 @@
   * [Tips and tricks](Pages\60-Tips-and-tricks.md)
   * [Official training](Pages\70-training.md)
 
-[gimmick:themechooser](Choose theme)
+[gimmick:themechooser](Theme)
 [gimmick:theme](flatly)
