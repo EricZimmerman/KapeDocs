@@ -3,10 +3,7 @@
 ## Can I use KAPE in client engagements? 
 
 - KAPE is free for any local, state, federal or international government agency. KAPE is also free for educational, research, and internal company use.
-- KAPE requires a commercial license when used on a third-party network and/or as part of a paid engagement.
-- Packages can include commercial license, training and certification.
-
-For more information on commercial licenses, contact [kape@kroll.com](mailto:kape@kroll.com)
+- As of January 1, KAPE IS NO LONGER AVAILABLE for commercial use (i.e. when used on a third-party network and/or as part of a paid engagement).
 
 ## Is there a way to have KAPE download all the binaries that are needed for the Modules?
 
