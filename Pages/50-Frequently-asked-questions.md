@@ -3,7 +3,7 @@
 ## Can I use KAPE in client engagements? 
 
 - KAPE is free for any local, state, federal or international government agency. KAPE is also free for educational, research, and internal company use.
-- As of January 1, KAPE IS NO LONGER AVAILABLE for commercial use (i.e. when used on a third-party network and/or as part of a paid engagement).
+- As of January 1, 2026 KAPE IS NO LONGER AVAILABLE for commercial use (i.e. when used on a third-party network and/or as part of a paid engagement).
 
 ## Is there a way to have KAPE download all the binaries that are needed for the Modules?
 
